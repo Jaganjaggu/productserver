@@ -9,4 +9,8 @@ router.get('/products',addProductController.viewAllProducts)
 
 router.delete('/product/delete/:id',addProductController.deleteAProduct)
 
+router.get('/product/:id',addProductController.getProductById)
+
+router.put('/product/edit/:id',multerConfig.single('productimg'),addProductController.editProduct)
+
 module.exports = router
